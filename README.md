@@ -36,6 +36,12 @@ Dependencies Installation.
 26. yarn add react-router-dom
 27. yarn add recharts
 
+CLONE THE REPOSITORY ON THE ROOT OR PLACE OF THE PROJECT IS
+
+MAKE A BUILD OF THE PROJECT
+
+yarn run build
+
 
 
 
