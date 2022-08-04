@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Da+2&display=swap");
+
+.dashi {
+  font-family: "Baloo Da 2", cursive;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.shina {
+  font-family: "Roboto", sans-serif;
+  font-size: 22px;
+  width: 100px;
+  font-weight: bold;
+}
+
+.shini {
+  font-family: "Baloo Da 2", cursive;
+  font-size: 13px;
+  padding: 10px;
+  color: rgb(132, 130, 130);
+  font-weight: bold;
+}
