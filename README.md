@@ -8,33 +8,33 @@ yarn create react-app './'
 
 Dependencies Installation.
 
-yarn add @emotion/styled
-yarn add @material-ui/core
-yarn add @material-ui/data-grid
-yarn add @material-ui/icons
-yarn add @mui/icons-material
-yarn add @mui/material
-yarn add @react-google-maps/api
-yarn add bootstrap
-yarn add date-fns
-yarn add gapi-script
-yarn add mdb-react-ui-kit
-yarn add moment
-yarn add react-bootstrap
-yarn add react-datepicker
-yarn add react-day-picker
-yarn add react-dom
-yarn add react-geocode
-yarn add react-google-charts
-yarn add react-google-drive-picker
-yarn add react-google-login
-yarn add react-google-picker
-yarn add react-google-places-autocomplete
-yarn add react-loader-spinner
-yarn add react-paginate
-yarn add react-pdf
-yarn add react-router-dom
-yarn add recharts
+1. yarn add @emotion/styled
+2. yarn add @material-ui/core
+3. yarn add @material-ui/data-grid
+4. yarn add @material-ui/icons
+5. yarn add @mui/icons-material
+6. yarn add @mui/material
+7. yarn add @react-google-maps/api
+8. yarn add bootstrap
+9. yarn add date-fns
+10. yarn add gapi-script
+11. yarn add mdb-react-ui-kit
+12. yarn add moment
+13. yarn add react-bootstrap
+14. yarn add react-datepicker
+15. yarn add react-day-picker
+16. yarn add react-dom
+17. yarn add react-geocode
+18. yarn add react-google-charts
+19. yarn add react-google-drive-picker
+20. yarn add react-google-login
+21. yarn add react-google-picker
+22. yarn add react-google-places-autocomplete
+23. yarn add react-loader-spinner
+24. yarn add react-paginate
+25. yarn add react-pdf
+26. yarn add react-router-dom
+27. yarn add recharts
 
 
 
