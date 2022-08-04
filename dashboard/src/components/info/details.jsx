@@ -1,4 +1,5 @@
-import "./details.css";
+
+       import "./details.css";
 import { gapi } from 'gapi-script';
 
 
@@ -344,7 +345,7 @@ const Details = () => {
     })
       .then((res) => res.json())
       .then((res) => {
-       /*  console.log(res); */
+         /* console.log(res);  */
         setProjectfolders(res);
       });
   }, [company]);
@@ -392,8 +393,7 @@ const Details = () => {
         setGoogledrive(elex.projfile_link);
       }
     });
-    setDownloadcontainer(data);
-   
+    setDownloadcontainer(data);   
   }, [projectfolders]);
   //getting links to files download zone /
 
@@ -601,8 +601,8 @@ function searchCompany(suling){
   }
 
 
-/* 4 */
-const renderPdf = (ri)=>{
+  /* 4 */
+  const renderPdf = (ri)=>{
   const linki = ri.result.files[0].webViewLink ;
   /* console.log(linki);
   window.location.replace(linki) */
@@ -610,26 +610,22 @@ const renderPdf = (ri)=>{
   window.open(linki, "_blank");
 
 }
-/* 3 */
- const findDrive =(folder,link)=>{
+   /* 3 */
+   const findDrive =(folder,link)=>{
       gapi.client.drive.files.list({
         pageSize:500,
         fields:'nextPageToken, files(id, name, mimeType, modifiedTime, webContentLink, webViewLink)',
         /* q:`'${folder}' in parents` */
       }).then((ress)=>{
-        const name = "VR_1364_SPOONBILL_WAY_SUNNYVALE - SITE - FLOOR PLAN.pdf"
         gapi.client.drive.files.list({
         pageSize:500,
         fields:'nextPageToken, files(id, name, mimeType, modifiedTime, webContentLink, webViewLink)',
         q:`name=\'${link}\'`,
        }).then((ri)=>{
-       /*  console.log(ri); */
            renderPdf(ri);
        })
-
       })
     }
-
     /* 2 */
    const initClient = (link)=>{
       gapi.client.init({
@@ -640,10 +636,10 @@ const renderPdf = (ri)=>{
       });
     }
     /* 1 */
-    const handleClientLoad =(e, link)=>{
+   const handleClientLoad =(e, link)=>{
       e.preventDefault(); 
-      gapi.load('client:auth2', ()=>initClient(link)); 
-    }
+   gapi.load('client:auth2', ()=>initClient(link)); 
+   }
   
   
 /* °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°° */
@@ -651,6 +647,45 @@ const renderPdf = (ri)=>{
 
 
 
+/* °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°° */
+/* 4 */
+const downloadPdf = (nat)=>{
+  const linki = nat.result.files[0].webContentLink;
+  /* console.log(linki);
+  window.location.replace(linki) */
+  /* navigate(linki) */
+  window.open(linki, "_blank");
+}
+/* 3 */
+const findDriveDownload = (projfilelink)=>{
+  gapi.client.drive.files.list({
+    pageSize:500,
+    fields:'nextPageToken, files(id, name, mimeType, modifiedTime, webContentLink, webViewLink)',
+  }).then((ress)=>{
+    gapi.client.drive.files.list({
+    pageSize:500,
+    fields:'nextPageToken, files(id, name, mimeType, modifiedTime, webContentLink, webViewLink)',
+    q:`name=\'${projfilelink}\'`,
+   }).then((ri)=>{
+       downloadPdf(ri);
+   })
+  })
+}
+/* 2 */
+const initDownClient = (projfilelink)=>{
+gapi.client.init({
+    'apiKey': 'AIzaSyBNPVvrMUVEGNXollqj4pQO0czA8RaRGRk',
+}).then(function ()
+{       
+gapi.client.load('drive','v3',()=>findDriveDownload(projfilelink));
+});
+}
+ /* 1 */
+const handleDownloadClient = (e, projfilelink) =>{
+  e.preventDefault();
+  gapi.load('client:auth2', ()=>initDownClient(projfilelink))
+}
+/* °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°° */
   return (
     <Container
       style={{
@@ -1728,7 +1763,6 @@ const renderPdf = (ri)=>{
                   target="_blank"
                   style={{ textDecoration: "none" }}
                 >
-                  {" "}
                   <p
                     style={{
                       marginLeft: "30px",
@@ -1744,11 +1778,9 @@ const renderPdf = (ri)=>{
             ) : (
               <div>
                 <a
-                  href="#"
                   style={{ textDecoration: "none" }}
                   key={ele.projfile_id}
                 >
-                  {" "}
                   <p
                     style={{
                       marginLeft: "30px",
@@ -1775,8 +1807,9 @@ const renderPdf = (ri)=>{
                 />
                 <a
                   href={ele.projfile_link}
-                  target="_blank"
+                   /* target="_blank" */
                   style={{ textDecoration: "none" }}
+                  onClick={(e)=>handleDownloadClient(e,ele.projfile_link)}
                 >
                   <p
                     style={{
