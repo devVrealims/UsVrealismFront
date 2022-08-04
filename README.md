@@ -42,7 +42,7 @@ MAKE A BUILD OF THE PROJECT
 
 yarn run build
 
-<a href>https://us.vrealism.com/login<a/>
+<a href target="_blank>https://us.vrealism.com<a/>
 
 
 
