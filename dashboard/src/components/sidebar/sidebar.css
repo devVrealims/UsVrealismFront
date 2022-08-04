@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Da+2&display=swap");
+
+
+.sidebar {
+  /*   display: flex; */
+  /*  flex: 1; */
+  /* height: calc(250vh - 50px); */
+  height: auto;
+  /*   height: calc(58vh); */
+  width: auto;
+  /* margin-left: -70px; */
+  /*   background-color: rgb(48, 44, 44); */
+  background-color: rgb(246, 242, 242);
+  box-shadow: 4px 4px 8px rgb(105, 93, 93);
+  /*  position: sticky; */
+  /*  margin-top: 1px; */
+    /* border: dotted red 3px; */
+
+  /*  width: 25%; */
+  /* min-width: 180px; */
+  /* z-index: "995"; */
+  margin-top: 30px;
+  border-radius: 10px 10px 10px 10px;
+  position: absolute;
+  margin-right:5em;
+}
+
+.sidebarWrapper {
+  /*   padding: 20px; */
+  color: #555;
+}
+
+.sidebarMenu {
+  margin-bottom: 10px;
+}
+
+.sidebarTitle {
+  font-size: 13px;
+  color: rgb(187, 186, 186);
+}
+
+.sidebarList {
+  list-style: none;
+  padding: 5px;
+}
+
+.sidebarListItem {
+  padding: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.sidebarListItem.active,
+.sidebarListItem:hover {
+  background-color: rgb(240, 240, 255);
+}
+
+.sidebarIcon {
+  margin-left: 30px;
+  font-size: 40px;
+}
+
+.beauty{
+  font-family: "Roboto", sans-serif;
+}
