@@ -1,0 +1,15 @@
+.searchForm {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+ /*  margin-left: 2px; */
+  padding: 0 0.5rem 0.25rem;
+  /* border-bottom: 1px solid #eee; */
+}
+.searchForm input[type="text"] {
+  flex-grow: 1;
+  max-width: 50%;
+  font-size: 1rem;
+  height: 50px;
+/*   border-radius: 10px; */
+}
