@@ -1,10 +1,6 @@
-
-       import "./details.css";
+import "./details.css";
 import { gapi } from 'gapi-script';
-
-
 import { Link } from "react-router-dom";
-
 import CloudDownloadIcon from "@mui/icons-material/CloudDownload";
 import ArrowCircleLeftOutlinedIcon from "@mui/icons-material/ArrowCircleLeftOutlined";
 import InfoIcon from "@mui/icons-material/Info";
