@@ -1,0 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Da+2&display=swap");
+.title-container label {
+  /* background-color: rgb(55, 55, 112); */
+  font-size: 30px;
+  font-family: "Baloo Da 2", cursive;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ec7967;
+}
